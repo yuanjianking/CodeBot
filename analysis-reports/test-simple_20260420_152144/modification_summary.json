@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "reportId": "test-simple_20260420_152144",
+    "modificationStartTime": "2026-04-20T15:24:00Z",
+    "modificationEndTime": "2026-04-20T15:24:10Z",
+    "modificationDuration": 10,
+    "agent": "code-modification-agent"
+  },
+  "input": {
+    "analysisReportPath": "analysis-reports/test-simple_20260420_152144/report.json",
+    "codeFolder": "/home/ubuntu/CodeBot/test-simple",
+    "taskRequirement": "去掉所有console语句（包括console.log、console.error、console.warn等）"
+  },
+  "summary": {
+    "totalFilesProcessed": 1,
+    "filesModified": 1,
+    "filesSkipped": 0,
+    "filesFailed": 0,
+    "totalChangesApplied": 1,
+    "changesSucceeded": 1,
+    "changesFailed": 0,
+    "overallStatus": "success"
+  },
+  "modifiedFiles": [
+    {
+      "filePath": "/home/ubuntu/CodeBot/test-simple/test.js",
+      "backupPath": "analysis-reports/test-simple_20260420_152144/backups/test.js.20260420_152144.bak",
+      "modificationStatus": "success",
+      "changesApplied": [
+        {
+          "location": "第1行",
+          "originalCode": "console.error('Claude查询失败:');",
+          "newCode": "",
+          "status": "success",
+          "timestamp": "2026-04-20T15:24:05Z"
+        }
+      ],
+      "validationResults": {
+        "syntaxCheck": "passed",
+        "formatCheck": "passed",
+        "notes": "文件现在只包含注释行，console.error语句已成功移除"
+      }
+    }
+  ],
+  "backupInfo": {
+    "backupDirectory": "analysis-reports/test-simple_20260420_152144/backups",
+    "totalBackups": 1,
+    "backupFiles": [
+      {
+        "original": "test.js",
+        "backup": "test.js.20260420_152144.bak",
+        "size": 56,
+        "timestamp": "2026-04-20T15:24:00Z"
+      }
+    ]
+  },
+  "nextStep": "run validation-agent"
+}

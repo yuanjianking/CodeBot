@@ -1,0 +1,57 @@
+{
+  "name": "code-maintenance-pipeline",
+  "version": "1.0.0",
+  "description": "A code maintenance pipeline using Claude Agent SDK",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "code-maintenance": "dist/index.js",
+    "cmaint": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "jest",
+    "lint": "eslint src --ext .ts",
+    "format": "prettier --write src/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "prepack": "npm run build",
+    "postinstall": "echo 'Code Maintenance Pipeline installed. Run with: npx code-maintenance --help'"
+  },
+  "keywords": ["code-maintenance", "agent-sdk", "claude", "automation", "refactoring", "code-analysis"],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-repo/code-maintenance-pipeline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/code-maintenance-pipeline/issues"
+  },
+  "homepage": "https://github.com/your-repo/code-maintenance-pipeline#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@anthropic-ai/claude-agent-sdk": "^0.1.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
